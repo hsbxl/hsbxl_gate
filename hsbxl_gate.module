@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains hsbxl_gate.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hsbxl_gate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the hsbxl_gate module.
+    case 'help.page.hsbxl_gate':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('gate features') . '</p>';
+      return $output;
+
+    default:
+  }
+}

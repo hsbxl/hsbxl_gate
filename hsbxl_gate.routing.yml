@@ -1,0 +1,9 @@
+hsbxl_gate.config:
+  path: '/admin/config/services/hsbxl_gate'
+  defaults:
+    _form: '\Drupal\hsbxl_gate\Form\SettingsForm'
+    _title: 'QR config'
+  requirements:
+    _permission: 'access content'
+route_callbacks:
+  - '\Drupal\hsbxl_gate\Routing\DynamicRoutes::routes'

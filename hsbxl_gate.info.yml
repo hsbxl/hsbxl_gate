@@ -1,0 +1,5 @@
+name: HSBXL gate
+type: module
+description: gate features
+core: 8.x
+package: Custom

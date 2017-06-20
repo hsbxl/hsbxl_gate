@@ -1,0 +1,6 @@
+hsbxl_gate.config:
+  title: 'Gate settings'
+  description: 'HSBXL gate settings'
+  parent: system.admin_config_services
+  route_name: hsbxl_gate.config
+  weight: 100
