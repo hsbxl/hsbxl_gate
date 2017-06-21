@@ -32,21 +32,26 @@ class SettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state)
   {
     $config = $this->config('hsbxl_gate.settings');
+    $gate_rnd_uri_part = $config->get('gate_rnd_uri_part') ? : 'gate';
 
-    $form['example_thing'] = array(
+    $form['gate_rnd_uri_part'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Things'),
-      '#default_value' => $config->get('things'),
-    );
-
-    $form['other_things'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Other things'),
-      '#default_value' => $config->get('other_things'),
+      '#title' => $this->t('Random QR code uri part'),
+      '#default_value' => $gate_rnd_uri_part,
     );
 
     return parent::buildForm($form, $form_state);
-
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+
+    $this->config('hsbxl_gate.settings')
+      ->set('gate_rnd_uri_part', $form_state->getValue('gate_rnd_uri_part'))
+      ->save();
+
+    parent::submitForm($form, $form_state);
+  }
 }

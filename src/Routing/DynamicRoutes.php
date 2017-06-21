@@ -20,7 +20,7 @@ class DynamicRoutes {
   public function routes() {
 
     $routes = array();
-    $rnd_code = \Drupal::state()->get('hsbxl_gate_rnd_code') ? : 'bar';
+    $rnd_code = \Drupal::state()->get('hsbxl_gate_rnd_code') ? : 'gate';
 
     $routes['hsbxl.gate'] = new Route(
       '/' . $rnd_code . '/qr',
