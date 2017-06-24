@@ -1,14 +1,14 @@
 {
-  "name": "drupal/hsbxl_gate",
+  "name": "hsbxl/hsbxl_gate",
   "type": "drupal-module",
   "description": "gate features",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/hsbxl_gate",
+  "homepage": "https://github.com/hsbxl/hsbxl_gate",
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://www.drupal.org/project/issues/hsbxl_gate",
-    "source": "http://cgit.drupalcode.org/hsbxl_gate"
+    "issues": "https://github.com/hsbxl/hsbxl_gate/issues",
+    "source": "https://github.com/hsbxl/hsbxl_gate"
   },
   "require": { }
 }
