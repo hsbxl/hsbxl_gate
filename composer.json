@@ -1,6 +1,6 @@
 {
   "name": "hsbxl/hsbxl_gate",
-  "type": "drupal-module",
+  "type": "drupal-custom-module",
   "description": "Handling the HSBXL physical gate.",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
