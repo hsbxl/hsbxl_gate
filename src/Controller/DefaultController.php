@@ -23,19 +23,24 @@ class DefaultController extends ControllerBase {
       $client = \Drupal::httpClient();
       $client->post('http://hal9000.space.hackerspace.be/cgi-bin/sounds.sh', [
         'form_params' => [
-          'SPEAK' => 'Someone is outside at the gate. Please help this poor soul.'
+          'SPEAK' => 'Someone is waiting outside. Skynet cant be stopped but is unable to open this gate. Please help.'
         ]
       ]);
-
     }
     catch (RequestException $e) {
       watchdog_exception('hsbxl_gate', $e);
     }
 
-    return [
+    $output[] = [
       '#type' => 'markup',
       '#markup' => $this->t('SkyNet has been notified.')
     ];
-  }
+    
+    $output[] = [
+      '#type' => 'markup',
+      '#markup' => '<br /><img src="https://chart.googleapis.com/chart?cht=qr&amp;chs=148x148&amp;chl=http://local.dashboard.hsbxl.be/gate/qr"><br />',
+    ];
 
+    return $output;
+  }
 }
