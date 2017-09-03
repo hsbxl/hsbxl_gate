@@ -35,10 +35,10 @@ class DefaultController extends ControllerBase {
       '#type' => 'markup',
       '#markup' => $this->t('SkyNet has been notified.')
     ];
-    
+
     $output[] = [
       '#type' => 'markup',
-      '#markup' => '<br /><img src="https://chart.googleapis.com/chart?cht=qr&amp;chs=148x148&amp;chl=http://local.dashboard.hsbxl.be/gate/qr"><br />',
+      '#markup' => '<br /><img src="https://chart.googleapis.com/chart?cht=qr&amp;chs=148x148&amp;chl=http://dashboard.hsbxl.be/gate/qr"><br />',
     ];
 
     return $output;
