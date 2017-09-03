@@ -38,6 +38,7 @@ class SettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Random QR code uri part'),
       '#default_value' => $gate_rnd_uri_part,
+      '#description' => $this->t('Part of the gate URL. Ex.: https://dashboard.hsbxl.be/gate/qr. The \'gate\' part in this case. Used to change the final URL and stop trolls. Temporary...')
     );
 
     return parent::buildForm($form, $form_state);

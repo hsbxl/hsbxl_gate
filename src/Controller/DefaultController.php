@@ -15,7 +15,6 @@ class DefaultController extends ControllerBase {
    * Qr.
    *
    * @return string
-   *   Return Hello string.
    */
   public function qr() {
 
@@ -35,7 +34,7 @@ class DefaultController extends ControllerBase {
 
     return [
       '#type' => 'markup',
-      '#markup' => $this->t('The bell inside has been notified of your call.')
+      '#markup' => $this->t('SkyNet has been notified.')
     ];
   }
 

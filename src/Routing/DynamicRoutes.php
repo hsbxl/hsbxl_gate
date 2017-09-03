@@ -26,7 +26,7 @@ class DynamicRoutes {
       '/' . $rnd_code . '/qr',
       array(
         '_controller' => '\Drupal\hsbxl_gate\Controller\DefaultController::qr',
-        '_title' => 'QR at the gate'
+        '_title' => 'Ding Dong'
       ),
       array(
         '_permission'  => 'access content',
