@@ -33,13 +33,17 @@ class DefaultController extends ControllerBase {
 
     $output[] = [
       '#type' => 'markup',
+      '#cache' => ['max-age' => 0],
       '#markup' => $this->t('SkyNet has been notified.')
     ];
 
     $output[] = [
       '#type' => 'markup',
+      '#cache' => ['max-age' => 0],
       '#markup' => '<br /><img src="https://chart.googleapis.com/chart?cht=qr&amp;chs=148x148&amp;chl=http://dashboard.hsbxl.be/gate/qr"><br />',
     ];
+
+    \Drupal::service('page_cache_kill_switch')->trigger();
 
     return $output;
   }
